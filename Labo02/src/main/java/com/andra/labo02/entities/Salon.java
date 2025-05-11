@@ -1,0 +1,31 @@
+package com.andra.labo02.entities;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.List;
+
+@Entity
+@Table(name ="salon")
+@Data
+public class Salon {
+    @Id
+    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @ManyToOne
+    @JoinColumn(name = "ID_posada")
+    private Posada posada;
+
+    @OneToMany(mappedBy = "salon")
+    private List<Ornamento> ornamentos;
+
+    @OneToMany(mappedBy = "salon")
+    private List<Reserva> reservas;
+
+    private int capacidad;
+
+    @Column(name = "esta_disponible")
+    private boolean disponibilidad;
+}
