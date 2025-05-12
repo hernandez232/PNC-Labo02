@@ -19,7 +19,7 @@ public class Persona {
     private Rol rol;
 
     @OneToMany(mappedBy = "empleado")
-    private List<Orden_trabajo> orden_trabajo;
+    private List<OrdenTrabajo> ordenesTrabajo;
 
     @OneToMany(mappedBy = "empleado")
     private List<Guardian> guardianes;

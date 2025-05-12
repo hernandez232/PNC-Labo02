@@ -22,7 +22,7 @@ public class Rotacion {
 
     private String turno;
 
-    private String Mes;
+    private String mes;
 
     @Column(name = "esta_activo")
     private boolean activo;

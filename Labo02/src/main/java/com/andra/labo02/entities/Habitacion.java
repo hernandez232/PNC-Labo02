@@ -20,10 +20,10 @@ public class Habitacion {
     private Piso piso;
 
     @OneToMany(mappedBy = "habitacion")
-    private List<Detalle_especial> detalle_especial;
+    private List<DetalleEspecial> detallesEspecial;
 
     @OneToMany(mappedBy = "habitacion")
-    private List<Orden_trabajo> orden_trabajo;
+    private List<OrdenTrabajo> ordenesTrabajo;
 
     private String nombre;
 

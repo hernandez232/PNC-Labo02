@@ -1,22 +1,28 @@
 package com.andra.labo02.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
 
 @Entity
-@Table(name ="detalle_especial")
+@Table(name ="orden_trabajo")
 @Data
-public class Detalle_especial {
+public class OrdenTrabajo {
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "ID_habitacion")
     private Habitacion habitacion;
 
-    private String nombre;
+    @ManyToOne
+    @JoinColumn(name = "ID_empleado")
+    private Persona empleado;
+
+    private String fecha;
+
+    private String hora;
 
     private String descripcion;
 }
