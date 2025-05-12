@@ -6,9 +6,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 public interface iHabitacionInterface extends iGenericRepository<Habitacion, Integer> {
-
     Habitacion findById(int id);
 
+    //nat query
     @Query(nativeQuery = true, value = "select * from habitacion where habitacion.nombre = :nombre")
     public Habitacion findByDepartamento(@Param("nombre") String nombre);
 

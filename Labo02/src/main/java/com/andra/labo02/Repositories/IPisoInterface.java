@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 public interface IPisoInterface {
     public Piso findById(int id);
 
+    //nat query
     @Query(nativeQuery = true, value = "select * from piso where piso.color = :color")
     public Piso findByColor(@Param("color") String color);
 

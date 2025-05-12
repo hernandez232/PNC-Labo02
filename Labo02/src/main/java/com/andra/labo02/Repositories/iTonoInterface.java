@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 public interface iTonoInterface extends iGenericRepository<Tono, Integer> {
     Tono findById(int id);
 
+    //nat query
     @Query(nativeQuery = true, value = "select * from tono where tono.nombre = :nombre")
     public Tono findByNombre(@Param("nombre") String nombre);
 

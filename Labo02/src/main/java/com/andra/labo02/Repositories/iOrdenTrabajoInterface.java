@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 public interface iOrdenTrabajoInterface extends iGenericRepository<Orden_trabajo, Integer> {
     Orden_trabajo findById(int id);
 
+    //nat query
     @Query(nativeQuery = true, value = "select * from orden_trabajo where orden_trabajo.empleado = :empleado")
     public Orden_trabajo findByEmpleado(@Param("empleado") String empleado);
 

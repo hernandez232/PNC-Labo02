@@ -9,9 +9,11 @@ public interface iPersonaRepository extends JpaRepository<Persona, Integer> {
     public Persona findById(int id);
 
     public Persona findByCorreo(String correo);
+
     //native
-    @Query(nativeQuery = true, value = "SELECT * FROM persona WHERE  persona.apellidp = :apellido ")
+    @Query(nativeQuery = true, value = "SELECT * FROM persona WHERE  persona.apellido = :apellido ")
     public Persona findByApellido(@Param("apellido") String apellido);
+
     //hibrid
     @Query("select p from Persona p where p.correo = :correo")
     public Persona findPersonaByCorreo(@Param("correo") String correo);
