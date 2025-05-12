@@ -6,13 +6,13 @@ import lombok.Data;
 import java.util.List;
 
 @Entity
-@Table(name ="reserva")
+@Table(name ="canje")
 @Data
 public class Canje {
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "ID_huesped")

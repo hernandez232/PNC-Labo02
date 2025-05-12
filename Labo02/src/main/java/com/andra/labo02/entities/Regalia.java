@@ -12,7 +12,7 @@ public class Regalia {
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @OneToMany(mappedBy = "regalia")
     private List<Canje> canjes;
