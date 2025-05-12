@@ -12,7 +12,7 @@ public class Tono {
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @OneToMany(mappedBy = "tono")
     private List<Piso> pisos;
