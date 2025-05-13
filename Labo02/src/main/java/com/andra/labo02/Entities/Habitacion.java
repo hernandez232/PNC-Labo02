@@ -1,4 +1,4 @@
-package com.andra.labo02.entities;
+package com.andra.labo02.Entities;
 
 
 import jakarta.persistence.*;

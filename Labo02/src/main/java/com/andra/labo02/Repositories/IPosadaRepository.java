@@ -1,10 +1,12 @@
 package com.andra.labo02.Repositories;
 
-import com.andra.labo02.entities.Posada;
+import com.andra.labo02.Entities.Posada;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-public interface IPosadaInterface extends iGenericRepository<Posada, Integer> {
+public interface IPosadaRepository extends iGenericRepository<Posada, Integer> {
+
+    //JPA functions
     public Posada findById(int id);
 
     //nat query
@@ -13,5 +15,5 @@ public interface IPosadaInterface extends iGenericRepository<Posada, Integer> {
 
     //deriv. query
     @Query("SELECT o FROM Posada o WHERE o.direccion = :direccion")
-    public Posada findByRol(@Param("direccion") String direccion);
+    public Posada findByDireccion(@Param("direccion") String direccion);
 }

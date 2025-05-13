@@ -1,4 +1,4 @@
-package com.andra.labo02.entities;
+package com.andra.labo02.Entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -58,6 +58,6 @@ public class Persona {
 
     private String correo;
 
-    @Column(name = "contraseña") // POSIBLE ERROR EN LA DB POR CARÁCTER ESPECIAL
+    @Column(name = "contraseña")
     private String contra;
 }

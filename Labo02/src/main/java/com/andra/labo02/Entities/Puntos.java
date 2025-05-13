@@ -1,9 +1,7 @@
-package com.andra.labo02.entities;
+package com.andra.labo02.Entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
-import java.util.List;
 
 @Entity
 @Table(name ="puntos")
@@ -12,7 +10,7 @@ public class Puntos {
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @ManyToOne
     @JoinColumn(name = "ID_huesped")

@@ -1,4 +1,4 @@
-package com.andra.labo02.entities;
+package com.andra.labo02.Entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -12,7 +12,7 @@ public class Estado {
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @OneToMany(mappedBy = "estado")
     private List<Reserva> reservas;

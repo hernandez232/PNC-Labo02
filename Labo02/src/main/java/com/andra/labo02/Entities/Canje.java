@@ -1,9 +1,7 @@
-package com.andra.labo02.entities;
+package com.andra.labo02.Entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
-import java.util.List;
 
 @Entity
 @Table(name ="canje")
